@@ -13,7 +13,12 @@ const getGoals = (req, res) => {
  * @access Private
  */
 const setGoal = (req, res) => {
-  res.status(200).json({ message: "Get Goals" });
+  // Handle empty text
+  if (!req.body.text) {
+    res.status(400);
+    throw new Error("Please add text field");
+  }
+  res.status(200).json({ message: "Set Goals" });
 };
 
 /**
