@@ -94,7 +94,9 @@ const loginUser = asyncHandler(async (req, res) => {
  * @access Private
  */
 const getUserData = asyncHandler(async (req, res) => {
-  res.json({ message: "User data display" });
+  // Get the userid from request and query data from DB
+  const { _id, name, email } = await User.findById(req.user.id);
+  res.status(200).json({ message: { _id, name, email } });
 });
 
 // Generate JWT Token
