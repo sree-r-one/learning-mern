@@ -14,7 +14,7 @@ const getGoals = asyncHandler(async (req, res) => {
 
 /**
  * @desc  SET goals
- * @route SET /api/goals/:id
+ * @route POST /api/goals
  * @access Private
  */
 const setGoal = asyncHandler(async (req, res) => {
