@@ -11,12 +11,12 @@ const Header = () => {
         <ul>
           <li>
             <Link to={"/login"}>
-              Sign in <FaSignInAlt />
+              Login <FaSignInAlt />
             </Link>
           </li>
           <li>
             <Link to={"/register"}>
-              Sign out
+              Register
               <FaSignOutAlt />
             </Link>{" "}
           </li>
